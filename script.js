@@ -55,4 +55,23 @@ queryAll('.pizzaInfo--cancelButton, .pizzaInfo--cancelMobileButton').forEach((it
   item.addEventListener('click', closeModal);
 });
 
+query('.pizzaInfo--qtmenos').addEventListener('click', () => {
+  if (modalQtd > 1) {
+    modalQtd--;
+    query('.pizzaInfo--qt').innerHTML = modalQtd;
+  }
+});
 
+query('.pizzaInfo--qtmais').addEventListener('click', () => {
+  modalQtd++;
+  query('.pizzaInfo--qt').innerHTML = modalQtd;
+});
+
+queryAll('.pizzaInfo--size').forEach((size, sizeIndex) => {
+  size.addEventListener('click', (e) => {
+    setTimeout(() => {
+      query('.pizzaInfo--size.selected').classList.remove('selected');
+      size.classList.add('selected');
+    }, 200)
+  })
+});

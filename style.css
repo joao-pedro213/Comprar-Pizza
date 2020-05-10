@@ -183,6 +183,7 @@ h1 {
     display:inline-flex;
     border-radius:10px;
     overflow:hidden;
+    transition: all ease .5s;
 }
 .pizzaInfo--size {
     padding:10px 15px;
